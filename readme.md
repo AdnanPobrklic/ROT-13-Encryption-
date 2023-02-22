@@ -1,4 +1,4 @@
-#Welcome to the ROT13 Encryption Website Script!
+# Welcome to the ROT13 Encryption Website Script!
 
 This is a simple web application that allows you to encrypt and decrypt your messages using the ROT13 algorithm. ROT13 is a simple substitution cipher that replaces each letter in the alphabet with the letter 13 places down the alphabet.
 
