@@ -21,24 +21,25 @@ btn.addEventListener('click', () => {
     textArea.value = "";
     inputLetters = inputLetters.split('')
     inputLetters.forEach(i => {
-        if(upperAlphabet.indexOf(i) > -1) {
-            let letterPosition = upperAlphabet.indexOf(i) + 13
-            if(letterPosition > 25){
-                letterPosition %= 26
-            }
-            outputArr.push((upperAlphabet[letterPosition]))
-        }else if(lowerAlphabet.indexOf(i) > -1){
-            let letterPosition = lowerAlphabet.indexOf(i) + 13
-            if(letterPosition > 25){
-                letterPosition %= 26
-            }
-            outputArr.push((lowerAlphabet[letterPosition]))
-        }else{
-            outputArr.push(' ')
-        }
+       conversion(i,outputArr,upperAlphabet,lowerAlphabet)
     })
     pTag.innerText = outputArr.join('')
 })
 
-
-
+function conversion(iterator,outputArray,firstArray,secondArray) {
+    if(firstArray.indexOf(iterator) > -1) {
+        let letterPosition = firstArray.indexOf(iterator) + 13
+        if(letterPosition > 25){
+            letterPosition %= 26
+        }
+        outputArray.push((firstArray[letterPosition]))
+    }else if(secondArray.indexOf(iterator) > -1){
+        let letterPosition = secondArray.indexOf(iterator) + 13
+        if(letterPosition > 25){
+            letterPosition %= 26
+        }
+        outputArray.push((secondArray[letterPosition]))
+    }else{
+        outputArray.push(' ')
+    }
+}
