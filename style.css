@@ -20,8 +20,15 @@ body {
 }
 
 button {
+    border: 1px solid black;
     margin: 0 auto;
     width: 150px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;    
 }
 
 h1{
@@ -48,6 +55,29 @@ button {
     padding: 5px;
     font-size: 1,2rem;
     font-family: inherit;
+}
+
+#copyBtn{
+    font-size: 1.2rem;
+    margin-left: 15px;
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    outline: none;
+    color: black;
+    border: 1px solid black;
+}
+
+#copyBtn:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+#temp-input{
+    width: 1px;
+    height: 1px;
+    opacity: 0;
 }
 
 @media all and (max-width: 1000px) {

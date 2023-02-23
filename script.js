@@ -1,6 +1,7 @@
 const btn = document.querySelector('button')
 const pTag = document.querySelector('p')
 const textArea = document.querySelector('textarea')
+const tempInput = document.querySelector('#temp-input')
 const lowerAlphabet = [];
 const upperAlphabet = [];
 let inputLetters = [];
@@ -23,7 +24,8 @@ btn.addEventListener('click', () => {
     inputLetters.forEach(i => {
        conversion(i,outputArr,upperAlphabet,lowerAlphabet)
     })
-    pTag.innerText = outputArr.join('')
+    pTag.innerHTML =` ${outputArr.join('')}  <button id="copyBtn" onclick="copy()"><i class="fa-solid fa-copy"></i></button> `
+    tempInput.value = outputArr.join('')
 })
 
 function conversion(iterator,outputArray,firstArray,secondArray) {
@@ -42,4 +44,10 @@ function conversion(iterator,outputArray,firstArray,secondArray) {
     }else{
         outputArray.push(' ')
     }
+}
+
+function copy(){
+    tempInput.select();
+    tempInput.setSelectionRange(0, 99999)
+    navigator.clipboard.writeText(tempInput.value);
 }
