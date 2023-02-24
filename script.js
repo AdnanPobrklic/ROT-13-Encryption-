@@ -50,4 +50,5 @@ function copy(){
     tempInput.select();
     tempInput.setSelectionRange(0, 99999)
     navigator.clipboard.writeText(tempInput.value);
+    alert('Copied to clipboard')
 }
