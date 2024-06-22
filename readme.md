@@ -1,5 +1,7 @@
 # Welcome to the ROT13 Encryption Website Script!
 
+Check the app out by clicking on this [LINK](https://decode-rot.netlify.app)
+
 This is a simple web application that allows you to encrypt and decrypt your messages using the ROT13 algorithm. ROT13 is a simple substitution cipher that replaces each letter in the alphabet with the letter 13 places down the alphabet.
 
 ## Getting Started:
@@ -11,10 +13,6 @@ This is a simple web application that allows you to encrypt and decrypt your mes
     Your encrypted or decrypted message will be displayed in the output field.
 
 ## Features:
-
     Simple and user-friendly interface.
     Supports encryption and decryption using ROT13 algorithm.
 
-
-## Contributing:
-If you want to contribute to this project, feel free to submit a pull request on the GitHub repository.
